@@ -7,6 +7,5 @@
     height: 16px;
     border-radius: 21px;
     transition: left .15s ease-in;
-    /* box-shadow: 0 3px 10px 0 rgba(10,10,10,.25); */
     transition: background-color .5s ease;
 }

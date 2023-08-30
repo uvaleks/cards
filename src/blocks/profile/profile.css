@@ -1,6 +1,6 @@
 .profile {
     display: grid;
-    grid-template-columns: 120px minmax(0, auto) minmax(50px, 150px);
+    grid-template-columns: 120px minmax(0, auto) 50px minmax(50px, 150px);
     gap: 30px;
     padding: 40px 0 50px;
     transition: all .5s ease;

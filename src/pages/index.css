@@ -23,6 +23,8 @@
 @import url(../blocks/profile/__profile-name/profile__profile-name.css);
 @import url(../blocks/profile/__profile-description/profile__profile-description.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__theme-wrapper/profile__theme-wrapper.css);
+@import url(../blocks/profile/__theme-button/profile__theme-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 
 @import url(../blocks/elements/elements.css);

@@ -95,12 +95,14 @@ export default class Card {
 
     generateCard() {
         this._cardLikes.forEach(like => {
+            // let avatarBg = document.createElement("div");
             let avatar = document.createElement("img");
             avatar.src = like.avatar;
             avatar.title = like.name;
             avatar.classList.add('card__avatar');
             avatar.style.marginLeft = '-' + (4 + 2 * this._cardLikes.length) + 'px';
             this._avatarsWrapper.style.marginLeft = (4 + 2 * this._cardLikes.length) + 'px';
+            // avatarBg.append(avatar);
             this._avatarsWrapper.append(avatar);
         });
         if (this._cardData.likes !== undefined) {

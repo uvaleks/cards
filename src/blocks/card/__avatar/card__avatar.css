@@ -1,4 +1,5 @@
 .card__avatar {
+    margin: 0;
     aspect-ratio: 1;
     border-radius: 50%;
     width: 24px;
@@ -16,4 +17,16 @@
 .card__avatar:hover {
     z-index: 10;
     cursor: help;
+}
+
+.card__avatar::before {
+    mix-blend-mode: hard-light;
+    border: .11em solid #1c1c1e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+    border-radius: 50%;
 }

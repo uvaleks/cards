@@ -1,9 +1,9 @@
 .card__like-wrapper {
     display: flex;
-    flex-direction: column;
-    margin: 0 0 13px;
-    /* margin: 22px 0px; */
-    gap: 3px;
-    min-height: 38px;
+    flex-direction: row;
+    gap: 6px;
     justify-content: center;
+    margin: 0 0 18px;
+    min-height: 38px;
+    align-items: center;
 }

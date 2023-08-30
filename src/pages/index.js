@@ -7,7 +7,7 @@ import PopupWithForm from '../components/PopupWithForm.js';
 import UserInfo from '../components/UserInfo.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
-import { validationConfig, initialCards } from '../utils/constants.js';
+import { validationConfig } from '../utils/constants.js';
 import PopupDeleteConfirm from '../components/PopupDeleteConfirm';
 
 const editButton = document.querySelector('.profile__edit-button');
@@ -38,7 +38,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     userId = userData._id
     userName = userData.name;
     userAvatar = userData.avatar;
-    mestoSection = new Section({userId, items: initialCards, renderer: createCard, rendererForOwn: createOwnCard}, '.elements');
+    mestoSection = new Section({userId, renderer: createCard, rendererForOwn: createOwnCard}, '.elements');
     mestoSection.renderItems(cards);
     mestoUserInfo.setUserInfo({name: userData.name, info: userData.about, avatar: userData.avatar})  
   })
@@ -216,20 +216,22 @@ photoPopup.setEventListeners();
 //THEME SWITCHER
 
 const themeSwitcher = document.querySelector('.header__theme-switcher-input');
+const themeButton = document.querySelector('.profile__theme-button');
 
 const page = document.querySelector('.page');
 if (page.classList.contains('dark-theme')) {
     themeSwitcher.checked = false;
+    themeButton.title = 'Светлая тема';
 }
 
 themeSwitcher.addEventListener('change', function() {
   if (this.checked) {
-    console.log("Checkbox is checked..");
     page.classList.add('light-theme');
     page.classList.remove('dark-theme');
+    themeButton.title = 'Темная тема';
   } else {
-    console.log("Checkbox is not checked..");
     page.classList.add('dark-theme');
     page.classList.remove('light-theme');
+    themeButton.title = 'Светлая тема';
   }
 });
